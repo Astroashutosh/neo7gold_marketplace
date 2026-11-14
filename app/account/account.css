@@ -1,0 +1,399 @@
+/* ================================================================
+   NEOS7 GOLD - CUSTOMER ACCOUNT PORTAL MASTER STYLES
+================================================================ */
+
+.customer-account-wrapper {
+  min-height: calc(100vh - 105px);
+  background: #08060a;
+  color: #f5f1e8;
+  padding-bottom: 80px;
+}
+
+/* Loading Screen */
+.account-loading-screen {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.account-loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  border-top-color: #d4af37;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Guest Screen */
+.account-guest-screen {
+  min-height: calc(100vh - 105px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, rgba(8, 6, 10, 0.98) 70%), #08060a;
+}
+
+.guest-card {
+  max-width: 480px;
+  text-align: center;
+  background: rgba(14, 12, 18, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: clamp(32px, 5vw, 48px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.12);
+}
+
+.guest-eyebrow {
+  display: block;
+  color: #d4af37;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.guest-title {
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(26px, 3.5vw, 32px);
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.guest-desc {
+  color: rgba(245, 241, 232, 0.65);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+.guest-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guest-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  color: #08060a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.guest-login-btn:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #c59b27 100%);
+  box-shadow: 0 8px 26px rgba(212, 175, 55, 0.45);
+  transform: translateY(-2px);
+}
+
+.guest-register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 10px;
+  color: #f5e6c8;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.guest-register-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+  color: #fff;
+}
+
+/* ================================================================
+   ACCOUNT HERO BANNER
+================================================================ */
+.account-hero-banner {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 12, 18, 0.95) 100%), #0c0a10;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 40px 0;
+}
+
+.account-hero-inner {
+  width: min(1360px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.client-identity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.client-crest {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #d4af37 0%, #aa771c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #08060a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+}
+
+.client-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.client-tier {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #d4af37;
+  text-transform: uppercase;
+}
+
+.kyc-badge {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.kyc-verified {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.35);
+}
+
+.kyc-pending {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.35);
+}
+
+.kyc-unverified {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.35);
+}
+
+.client-name {
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.client-email {
+  color: rgba(245, 241, 232, 0.5);
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.client-stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(245, 241, 232, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.stat-val {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d4af37;
+  letter-spacing: 0.05em;
+}
+
+/* ================================================================
+   MAIN GRID & SIDEBAR
+================================================================ */
+.account-main-grid {
+  width: min(1360px, 92%);
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .account-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.account-sidebar {
+  background: rgba(14, 12, 18, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(16px);
+}
+
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 960px) {
+  .account-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+}
+
+.account-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: rgba(245, 241, 232, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.account-nav-link:hover {
+  background: rgba(212, 175, 55, 0.08);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.account-nav-link.active {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(170, 119, 28, 0.1) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.12);
+}
+
+.nav-icon {
+  font-size: 14px;
+}
+
+.account-sidebar-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.account-signout-btn {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(224, 122, 122, 0.3);
+  border-radius: 8px;
+  background: rgba(224, 122, 122, 0.06);
+  color: #e07a7a;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.account-signout-btn:hover {
+  background: rgba(224, 122, 122, 0.16);
+  color: #ff9b9b;
+}
+
+/* ================================================================
+   DYNAMIC CONTENT AREA
+================================================================ */
+.account-content-area {
+  min-width: 0;
+  background: rgba(14, 12, 18, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 16px;
+  padding: clamp(24px, 4vw, 36px);
+  backdrop-filter: blur(16px);
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.content-eyebrow {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.content-title {
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 500;
+  margin: 0;
+}
+

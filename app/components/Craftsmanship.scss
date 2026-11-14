@@ -1,0 +1,368 @@
+@import '../variables';
+
+.craftsmanship-section {
+  position: relative;
+  min-height: 100lvh;
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      #3d290d 0%,
+      #211406 45%,
+      #100a03 100%
+    );
+
+  color: #fff8df;
+}
+
+.craftsmanship-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* GOLD GLOWS */
+
+.craft-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.craft-glow-one {
+  width: 450px;
+  height: 450px;
+
+  top: 15%;
+  left: 10%;
+
+  background: rgba(212, 175, 55, 0.12);
+
+  animation: glowFloat 7s ease-in-out infinite;
+}
+
+.craft-glow-two {
+  width: 350px;
+  height: 350px;
+
+  right: 10%;
+  bottom: 10%;
+
+  background: rgba(255, 241, 168, 0.1);
+
+  animation: glowFloat 9s ease-in-out infinite reverse;
+}
+
+/* ORBITS */
+
+.craft-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(212, 175, 55, 0.15);
+
+  transform: translate(-50%, -50%);
+}
+
+.orbit-one {
+  width: 300px;
+  height: 300px;
+
+  animation: orbitRotate 18s linear infinite;
+}
+
+.orbit-two {
+  width: 500px;
+  height: 500px;
+
+  border-color: rgba(255, 241, 168, 0.08);
+
+  animation: orbitRotate 28s linear infinite reverse;
+}
+
+.orbit-three {
+  width: 700px;
+  height: 700px;
+
+  border-color: rgba(212, 175, 55, 0.06);
+
+  animation: orbitRotate 40s linear infinite;
+}
+
+/* PARTICLES */
+
+.craft-particle {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #fff1a8;
+
+  box-shadow:
+    0 0 12px #fff1a8,
+    0 0 25px rgba(212, 175, 55, 0.5);
+
+  animation: particleFloat 5s ease-in-out infinite;
+}
+
+.particle-one {
+  top: 20%;
+  left: 20%;
+}
+
+.particle-two {
+  top: 30%;
+  right: 20%;
+
+  animation-delay: 1s;
+}
+
+.particle-three {
+  bottom: 25%;
+  left: 15%;
+
+  animation-delay: 2s;
+}
+
+.particle-four {
+  bottom: 20%;
+  right: 25%;
+
+  animation-delay: 3s;
+}
+
+.particle-five {
+  top: 60%;
+  left: 80%;
+
+  animation-delay: 1.5s;
+}
+
+/* CONTENT */
+
+.craftsmanship-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, 90%);
+
+  min-height: 100lvh;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.craftsmanship-label {
+  margin-bottom: 25px;
+
+  color: #d4af37;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5em;
+}
+
+.craftsmanship-content h2 {
+  margin: 0;
+
+  font-family: $playfair;
+
+  font-size: clamp(60px, 9vw, 130px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+}
+
+.craftsmanship-content h2 span {
+  display: block;
+
+  background: linear-gradient(
+    90deg,
+    #fff8df,
+    #fff1a8,
+    #d4af37
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+.craftsmanship-description {
+  max-width: 580px;
+
+  margin-top: 40px;
+
+  color: rgba(245, 230, 189, 0.7);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  font-weight: 300;
+}
+
+.craftsmanship-line {
+  width: 80px;
+  height: 1px;
+
+  margin: 45px 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    transparent
+  );
+}
+
+/* DETAILS */
+
+.craftsmanship-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+
+  gap: 60px;
+
+  text-align: left;
+}
+
+.craft-detail {
+  padding: 20px 0;
+
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.craft-detail span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #d4af37;
+
+  font-size: 11px;
+
+  letter-spacing: 0.2em;
+}
+
+.craft-detail h3 {
+  margin-bottom: 12px;
+
+  color: #fff8df;
+
+  font-family: $playfair;
+
+  font-size: 22px;
+
+  font-weight: 400;
+}
+
+.craft-detail p {
+  color: rgba(232, 215, 170, 0.55);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* ANIMATIONS */
+
+@keyframes orbitRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes glowFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(30px, -30px);
+  }
+}
+
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-25px);
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .craftsmanship-content {
+    padding: 100px 0;
+  }
+
+  .craftsmanship-content h2 {
+    font-size: 64px;
+  }
+
+  .craftsmanship-description {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .craftsmanship-details {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    width: 90%;
+  }
+
+  .craftsmanship-line {
+    margin: 35px 0;
+  }
+
+  .orbit-two {
+    width: 350px;
+    height: 350px;
+  }
+
+  .orbit-three {
+    width: 500px;
+    height: 500px;
+  }
+}

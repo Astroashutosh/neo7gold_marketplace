@@ -1,0 +1,44 @@
+// Fonts
+$archivo: 'Inter', sans-serif;
+$playfair: 'Inter', sans-serif;
+$qwitcher: 'Inter', sans-serif;
+
+// Colors
+
+$white: #ffffff;
+$black: #000000;
+$salmon: #211406;
+$text: #52322B;
+$hover: #BB4C33;
+
+
+$gold: #d4af37;
+$gold-light: #fff1a8;
+$gold-dark: #8a6420;
+
+$background: #211406;
+
+// Pixels X REM
+$browser-context: 16;
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{calc($pixels / $context)}rem;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}

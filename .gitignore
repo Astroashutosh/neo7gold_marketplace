@@ -1,0 +1,7 @@
+node_modules/
+.next/
+out/
+*.log
+*.zip
+/public/biorntae_livedb.sql
+/public/bellecar_live.sql

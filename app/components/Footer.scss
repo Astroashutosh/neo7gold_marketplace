@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+.gold-footer {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(180, 133, 43, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(180, 133, 43, 0.045),
+      transparent 28%
+    ),
+    #080807;
+
+  color: #e8e0ce;
+  border-top: 1px solid rgba(207, 157, 61, 0.42);
+  font-family: "Inter", sans-serif;
+}
+
+/* Subtle luxury texture */
+.gold-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.012) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.012) 25%,
+      transparent 25%
+    );
+  background-size: 4px 4px;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 68px 40px 58px;
+
+  display: grid;
+  grid-template-columns:
+    1.45fr
+    0.85fr
+    1fr
+    1.05fr
+    1.25fr;
+
+  gap: 55px;
+}
+
+/* Brand */
+
+.footer-logo {
+  display: inline-block;
+
+  color: #f5eee0;
+  text-decoration: none;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-logo span {
+  color: #d9a94e;
+}
+
+.footer-tagline {
+  margin-top: -3px;
+
+  color: #c89436;
+
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.footer-description {
+  max-width: 280px;
+  margin: 25px 0 23px;
+
+  color: #9b968c;
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Social */
+
+.social-links {
+  display: flex;
+  gap: 11px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d9a94e;
+
+  border: 1px solid rgba(201, 151, 58, 0.55);
+  border-radius: 50%;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #0b0b09;
+  background: #d9a94e;
+  transform: translateY(-3px);
+}
+
+/* Columns */
+
+.footer-column h3 {
+  margin: 3px 0 25px;
+
+  color: #d9a94e;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.footer-column nav {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-column nav a {
+  width: fit-content;
+
+  color: #b9b4a9;
+
+  font-size: 12px;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.footer-column nav a:hover {
+  color: #e2b75b;
+  padding-left: 4px;
+}
+
+/* Contact */
+
+.contact-column {
+  min-width: 180px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  margin-bottom: 17px;
+
+  color: #b9b4a9;
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d9a94e;
+
+  border: 1px solid rgba(201, 151, 58, 0.4);
+  border-radius: 50%;
+}
+
+/* Newsletter */
+
+.newsletter p {
+  max-width: 250px;
+
+  margin: 0 0 21px;
+
+  color: #9b968c;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 43px;
+
+  border: 1px solid rgba(153, 145, 128, 0.4);
+  border-radius: 25px;
+
+  transition: border-color 0.25s ease;
+}
+
+.newsletter-form:focus-within {
+  border-color: #d5a64c;
+}
+
+.newsletter-form input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 52px 0 17px;
+
+  color: #e9e1d0;
+  background: transparent;
+
+  border: 0;
+  outline: none;
+
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.newsletter-form input::placeholder {
+  color: #77736c;
+}
+
+.newsletter-form button {
+  position: absolute;
+  right: 3px;
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #17130b;
+  background: #e2b452;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background: #f0ca70;
+  transform: translateX(2px);
+}
+
+/* Bottom */
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+
+  min-height: 66px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 40px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+
+  color: #77736b;
+
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.bottom-links {
+  position: absolute;
+  right: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-links a {
+  color: #77736b;
+  text-decoration: none;
+}
+
+.bottom-links a:hover {
+  color: #d9a94e;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 35px;
+  }
+
+  .footer-brand {
+    grid-column: span 3;
+  }
+
+  .footer-description {
+    max-width: 450px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 50px 24px 40px;
+
+    gap: 38px 25px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .footer-description {
+    margin-top: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 20px;
+  }
+
+  .bottom-links {
+    position: static;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 460px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand,
+  .footer-column {
+    grid-column: auto;
+  }
+
+  .footer-logo {
+    font-size: 27px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.whatsapp-icon {
+  width: 17px;
+  height: 17px;
+
+  color: #d9a94e;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.social-links a:hover .whatsapp-icon {
+  color: #111;
+
+  transform: scale(1.12);
+
+  filter: drop-shadow(
+    0 0 8px rgba(217, 169, 78, 0.6)
+  );
+}
